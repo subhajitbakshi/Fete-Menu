@@ -1,214 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holy Family School Fete: Menu & Fun</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subhajit Bakshi | Mathematics Coaching Initiative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right, #f8f9ff, #eef1ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #4338ca);
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      margin: 5px 0;
+      opacity: 0.9;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: slideUp 1s ease;
+    }
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+    .cta {
+      background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+      padding: 40px;
+      text-align: center;
+      border-radius: 20px;
+      margin-top: 30px;
+      animation: pulse 2s infinite;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #1e3a8a, #4338ca);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #1e3a8a;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+    }
 
-    <style>
-        :root {
-            --red: #E74C3C;
-            --green: #2ECC71;
-            --yellow: #F1C40F;
-            --blue: #3498DB;
-            --bg: #FAFAFA;
-            --text: #333;
-            --beige: #F8F4EE;
-            --card-green: #E8F8F5;
-            --card-blue: #EBF5FB;
-            --card-red: #FDEDEC;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: var(--bg);
-            color: var(--text);
-        }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 20px 10px;
-            background: linear-gradient(to right, #F9EBEA, #D6EAF8);
-            border-bottom: 5px solid var(--red);
-        }
-
-        .header h1 {
-            font-size: 2.4em;
-            margin: 0;
-            color: var(--red);
-            text-transform: uppercase;
-        }
-
-        .header h2 {
-            margin: 8px 0 0;
-            font-size: 1.3em;
-            color: #555;
-            font-weight: normal;
-        }
-
-        /* Layout */
-        .main-content {
-            display: grid;
-            grid-template-columns: 2fr 1.5fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        /* Food Section */
-        .food-menu {
-            background: var(--beige);
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .food-menu h3 {
-            margin-top: 0;
-            color: var(--red);
-            border-bottom: 3px solid var(--yellow);
-            padding-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .food-menu p {
-            font-style: italic;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        .item {
-            display: grid;
-            grid-template-columns: 40px 1fr auto;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px dashed #ccc;
-        }
-
-        .item:last-child {
-            border-bottom: none;
-        }
-
-        .icon {
-            font-size: 1.4em;
-        }
-
-        .price {
-            font-weight: bold;
-            color: var(--red);
-        }
-
-        /* Fun Stalls */
-        .fun h3 {
-            margin-top: 0;
-            color: var(--blue);
-            border-bottom: 3px solid var(--red);
-            padding-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .stall {
-            display: flex;
-            gap: 10px;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .stall span {
-            font-size: 2em;
-        }
-
-        .star { background: var(--card-blue); }
-        .games { background: var(--card-green); }
-        .art { background: var(--card-red); }
-
-        .stall h4 {
-            margin: 0;
-            font-size: 1em;
-            text-transform: uppercase;
-        }
-
-        .stall p {
-            margin: 5px 0 0;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(67, 56, 202, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(67, 56, 202, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(67, 56, 202, 0); }
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
+  <header>
+    <h1>Subhajit Bakshi</h1>
+    <p>M.Sc. in Mathematics | B.Ed.</p>
+    <p>Mathematics Coaching Initiative | Classes VI–XII</p>
+    <p>6+ Years of Teaching Experience</p>
+  </header>
 
-    <header class="header">
-        <h1>HOLY FAMILY SCHOOL, NUTA</h1>
-        <h2>Annual Fete: Food Menu & Fun Stalls</h2>
-    </header>
+  <section>
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">
+      I am a professionally trained Mathematics teacher with an <strong>M.Sc. in Mathematics</strong> and a <strong>B.Ed.</strong>,
+      having more than <strong>6 years of formal teaching experience</strong>. I run a dedicated mathematics coaching
+      initiative focused on building strong fundamentals, logical thinking, and exam-oriented preparation for
+      students from Classes VI to XII.
+    </p>
+  </section>
 
-    <main class="main-content">
+  <section>
+    <h2>What I Offer</h2>
+    <div class="cards">
+      <div class="card">Concept-based learning</div>
+      <div class="card">Board exam preparation (ICSE, ISC, CBSE)</div>
+      <div class="card">Regular practice & assessments</div>
+      <div class="card">Doubt-clearing sessions</div>
+      <div class="card">Personalized attention</div>
+      <div class="card">Weekly tests & progress tracking</div>
+    </div>
+  </section>
 
-        <section class="food-menu">
-            <h3>Food Fest Menu</h3>
-            <p>All items are available through coupons only.</p>
+  <section>
+    <h2>Last-Minute ICSE Class X Resources</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">
+      I provide curated <strong>Last-Minute Suggestions for ICSE Class X Mathematics</strong> to help students revise
+      important concepts, formulas, and exam-focused problems efficiently.
+    </p>
+    <div class="cta">
+      <p>Click bhelow to access the Google Drive resources:</p>
+      <a href="#" class="btn" target="_blank">View Last-Minute Suggestions</a>
+      <p style="font-size: 0.9em; margin-top: 10px;">https://drive.google.com/file/d/1nFJ8MD_n7iO1S-Y8apuS39aaKsDcIamS/view?usp=drivesdk</p>
+    </div>
+  </section>
 
-            <div class="item"><span class="icon">🐟</span>Fish Finger <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🍗</span>Chicken Lollipop <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🥔</span>Honey Chilli Potato <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🥟</span>Momo <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🍢</span>Chicken Kabab (2 pcs) <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🥗</span>Papri Chaat <span class="price">3 Coupons</span></div>
-            <div class="item"><span class="icon">🍟</span>Chicken Pakora <span class="price">2 Coupons</span></div>
-            <div class="item"><span class="icon">🥕</span>Veg Cutlet <span class="price">2 Coupons</span></div>
-            <div class="item"><span class="icon">🥚</span>Egg Devil <span class="price">2 Coupons</span></div>
-            <div class="item"><span class="icon">🥣</span>Ghughni <span class="price">1 Coupon</span></div>
-            <div class="item"><span class="icon">🌶️</span>Alu Kabli <span class="price">1 Coupon</span></div>
-            <div class="item"><span class="icon">☕</span>Coffee <span class="price">1 Coupon</span></div>
-            <div class="item"><span class="icon">💧</span>Water (500 ml) <span class="price">1 Coupon</span></div>
-        </section>
+  <section>
+    <h2>Why Choose Me</h2>
+    <div class="cards">
+      <div class="card">M.Sc. in Mathematics & B.Ed. qualified</div>
+      <div class="card">6+ years of classroom experience</div>
+      <div class="card">Student-friendly teaching approach</div>
+      <div class="card">Strong conceptual focus</div>
+      <div class="card">Exam-oriented strategy</div>
+      <div class="card">Proven academic guidance</div>
+    </div>
+  </section>
 
-        <section class="fun">
-            <h3>More Than Just Food</h3>
+  <section>
+    <h2>Contact</h2>
+    <div class="cta">
+      <p>For admissions and inquiries, contact:</p>
+      <p><strong>Phone:</strong> 9474772292/8637828463</p>
+      <p><strong>Email:</strong> subhajitb500@gmail.com</p>
+      <a href="https://wa.me/" class="btn">Chat on WhatsApp</a>
+    </div>
+  </section>
 
-            <div class="stall star">
-                <span>⭐</span>
-                <div>
-                    <h4>Star Maker Corner</h4>
-                    <p>Show your talent for just one coupon.</p>
-                </div>
-            </div>
-
-            <div class="stall games">
-                <span>🎮</span>
-                <div>
-                    <h4>Games Stalls</h4>
-                    <p>Enjoy fun games at one coupon per game.</p>
-                </div>
-            </div>
-
-            <div class="stall art">
-                <span>🎨</span>
-                <div>
-                    <h4>Art & Craft Stall</h4>
-                    <p>Explore creative student artworks.</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-</div>
+  <footer>
+    <p>© 2026 Subhajit Bakshi | Mathematics Coaching Initiative</p>
+  </footer>
 </body>
-</html>
+          </html>
+          
